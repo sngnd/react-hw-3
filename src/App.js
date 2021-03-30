@@ -18,10 +18,9 @@ function App() {
 
   const handleSubmit = () => {
     getPost(searchValue, range).then((response) => {
-      if (range) setData([...data, ...response.data]);
+      if (range) setData([...response.data]);
       else
         setData([
-          ...data,
           {
             date: response.data.date,
             explanation: response.data.explanation,

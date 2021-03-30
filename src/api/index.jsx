@@ -13,6 +13,7 @@ const getPost = (date, isRange) => {
     const arrayOfDate = date.split("/");
     const startDate = arrayOfDate[0];
     const endDate = arrayOfDate[1];
+
     return axios.get(`${config.url}`, {
       params: {
         api_key: config.api_key,
